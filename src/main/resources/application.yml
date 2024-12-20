@@ -3,7 +3,7 @@ spring:
     name: testttstt
   datasource:
     username : sonar
-    url : jdbc:postgresql://localhost:5432/sonar
+    url : jdbc:postgresql://host.docker.internal:5432/sonar
     password: sonar
     driver-class-name: org.postgresql.Driver
   liquibase:
