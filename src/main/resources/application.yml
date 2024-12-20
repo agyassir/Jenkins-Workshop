@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: testttstt
+  datasource:
+    username : sonar
+    url : jdbc:postgresql://localhost:5432/sonar
+    password: sonar
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/master.yml
+  jpa:
+    database: postgresql

@@ -1,0 +1,802 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1734684735886-1
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_user
+                  name: id
+                  type: UUID
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+            tableName: user
+  - changeSet:
+      id: 1734684735886-2
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: active_rule_parameters
+  - changeSet:
+      id: 1734684735886-3
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: active_rules
+  - changeSet:
+      id: 1734684735886-4
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: alm_pats
+  - changeSet:
+      id: 1734684735886-5
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: alm_settings
+  - changeSet:
+      id: 1734684735886-6
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: analysis_properties
+  - changeSet:
+      id: 1734684735886-7
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: anticipated_transitions
+  - changeSet:
+      id: 1734684735886-8
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: app_branch_project_branch
+  - changeSet:
+      id: 1734684735886-9
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: app_projects
+  - changeSet:
+      id: 1734684735886-10
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: audits
+  - changeSet:
+      id: 1734684735886-11
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: ce_activity
+  - changeSet:
+      id: 1734684735886-12
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: ce_queue
+  - changeSet:
+      id: 1734684735886-13
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: ce_scanner_context
+  - changeSet:
+      id: 1734684735886-14
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: ce_task_characteristics
+  - changeSet:
+      id: 1734684735886-15
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: ce_task_input
+  - changeSet:
+      id: 1734684735886-16
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: ce_task_message
+  - changeSet:
+      id: 1734684735886-17
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: components
+  - changeSet:
+      id: 1734684735886-18
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: cve_cwe
+  - changeSet:
+      id: 1734684735886-19
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: cves
+  - changeSet:
+      id: 1734684735886-20
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: default_qprofiles
+  - changeSet:
+      id: 1734684735886-21
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: deprecated_rule_keys
+  - changeSet:
+      id: 1734684735886-22
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: devops_perms_mapping
+  - changeSet:
+      id: 1734684735886-23
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: duplications_index
+  - changeSet:
+      id: 1734684735886-24
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: es_queue
+  - changeSet:
+      id: 1734684735886-25
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: event_component_changes
+  - changeSet:
+      id: 1734684735886-26
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: events
+  - changeSet:
+      id: 1734684735886-27
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: external_groups
+  - changeSet:
+      id: 1734684735886-28
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: file_sources
+  - changeSet:
+      id: 1734684735886-29
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: github_orgs_groups
+  - changeSet:
+      id: 1734684735886-30
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: group_roles
+  - changeSet:
+      id: 1734684735886-31
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: groups
+  - changeSet:
+      id: 1734684735886-32
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: groups_users
+  - changeSet:
+      id: 1734684735886-33
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: internal_component_props
+  - changeSet:
+      id: 1734684735886-34
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: internal_properties
+  - changeSet:
+      id: 1734684735886-35
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: issue_changes
+  - changeSet:
+      id: 1734684735886-36
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: issues
+  - changeSet:
+      id: 1734684735886-37
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: issues_dependency
+  - changeSet:
+      id: 1734684735886-38
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: issues_fixed
+  - changeSet:
+      id: 1734684735886-39
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: issues_impacts
+  - changeSet:
+      id: 1734684735886-40
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: measures
+  - changeSet:
+      id: 1734684735886-41
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: metrics
+  - changeSet:
+      id: 1734684735886-42
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: new_code_periods
+  - changeSet:
+      id: 1734684735886-43
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: new_code_reference_issues
+  - changeSet:
+      id: 1734684735886-44
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: notifications
+  - changeSet:
+      id: 1734684735886-45
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: org_qprofiles
+  - changeSet:
+      id: 1734684735886-46
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: perm_templates_groups
+  - changeSet:
+      id: 1734684735886-47
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: perm_templates_users
+  - changeSet:
+      id: 1734684735886-48
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: perm_tpl_characteristics
+  - changeSet:
+      id: 1734684735886-49
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: permission_templates
+  - changeSet:
+      id: 1734684735886-50
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: plugins
+  - changeSet:
+      id: 1734684735886-51
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: portfolio_proj_branches
+  - changeSet:
+      id: 1734684735886-52
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: portfolio_projects
+  - changeSet:
+      id: 1734684735886-53
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: portfolio_references
+  - changeSet:
+      id: 1734684735886-54
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: portfolios
+  - changeSet:
+      id: 1734684735886-55
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: project_alm_settings
+  - changeSet:
+      id: 1734684735886-56
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: project_badge_token
+  - changeSet:
+      id: 1734684735886-57
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: project_branches
+  - changeSet:
+      id: 1734684735886-58
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: project_dependencies
+  - changeSet:
+      id: 1734684735886-59
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: project_links
+  - changeSet:
+      id: 1734684735886-60
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: project_measures
+  - changeSet:
+      id: 1734684735886-61
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: project_qgates
+  - changeSet:
+      id: 1734684735886-62
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: project_qprofiles
+  - changeSet:
+      id: 1734684735886-63
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: projects
+  - changeSet:
+      id: 1734684735886-64
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: properties
+  - changeSet:
+      id: 1734684735886-65
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: push_events
+  - changeSet:
+      id: 1734684735886-66
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: qgate_group_permissions
+  - changeSet:
+      id: 1734684735886-67
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: qgate_user_permissions
+  - changeSet:
+      id: 1734684735886-68
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: qprofile_changes
+  - changeSet:
+      id: 1734684735886-69
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: qprofile_edit_groups
+  - changeSet:
+      id: 1734684735886-70
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: qprofile_edit_users
+  - changeSet:
+      id: 1734684735886-71
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: quality_gate_conditions
+  - changeSet:
+      id: 1734684735886-72
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: quality_gates
+  - changeSet:
+      id: 1734684735886-73
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: report_schedules
+  - changeSet:
+      id: 1734684735886-74
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: report_subscriptions
+  - changeSet:
+      id: 1734684735886-75
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: rule_changes
+  - changeSet:
+      id: 1734684735886-76
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: rule_desc_sections
+  - changeSet:
+      id: 1734684735886-77
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: rule_impact_changes
+  - changeSet:
+      id: 1734684735886-78
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: rule_repositories
+  - changeSet:
+      id: 1734684735886-79
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: rule_tags
+  - changeSet:
+      id: 1734684735886-80
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: rules
+  - changeSet:
+      id: 1734684735886-81
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: rules_default_impacts
+  - changeSet:
+      id: 1734684735886-82
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: rules_parameters
+  - changeSet:
+      id: 1734684735886-83
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: rules_profiles
+  - changeSet:
+      id: 1734684735886-84
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: saml_message_ids
+  - changeSet:
+      id: 1734684735886-85
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: scanner_analysis_cache
+  - changeSet:
+      id: 1734684735886-86
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: schema_migrations
+  - changeSet:
+      id: 1734684735886-87
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: scim_groups
+  - changeSet:
+      id: 1734684735886-88
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: scim_users
+  - changeSet:
+      id: 1734684735886-89
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: scm_accounts
+  - changeSet:
+      id: 1734684735886-90
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: session_tokens
+  - changeSet:
+      id: 1734684735886-91
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: snapshots
+  - changeSet:
+      id: 1734684735886-92
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: telemetry_metrics_sent
+  - changeSet:
+      id: 1734684735886-93
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: user_dismissed_messages
+  - changeSet:
+      id: 1734684735886-94
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: user_roles
+  - changeSet:
+      id: 1734684735886-95
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: user_tokens
+  - changeSet:
+      id: 1734684735886-96
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: users
+  - changeSet:
+      id: 1734684735886-97
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: webhook_deliveries
+  - changeSet:
+      id: 1734684735886-98
+      author: Youcode
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: webhooks
+
